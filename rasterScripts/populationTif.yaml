@@ -1,0 +1,17 @@
+    - filePath: "/opt/data/data/tif/AFR_PPP_A1565PL_farmer_aged_lt400ppp_2020_adj_v5.tif"
+      prefixColumn: "rur20pop_"
+      prefixColumnPreserve: "rur20pop_s"
+      detailLabel: "less than 400 adult 15yo+ population per sqkm 2020"
+      year: 2020
+
+    - filePath: "/opt/data/data/tif/AFR_PPP_A1565PL_farmer_aged_2020_adj_v5.tif"
+      prefixColumn: "adu20pop_"
+      prefixColumnPreserve: "adu20pop_s"
+      detailLabel: "total adult 15yo+ population per sqkm 2020"
+      year: 2020
+
+    - filePath: "/opt/data/data/tif/AFR_PPP_2020_adj_v2.tif"
+      prefixColumn: "all20pop_"
+      prefixColumnPreserve: "all20pop_s"
+      detailLabel: "total population per sqkm 2020"
+      year: 2020
