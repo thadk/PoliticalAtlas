@@ -1,6 +1,8 @@
 # WorldPoliticalPopulation
 
-Makefile combining GADM3.6 with 2020 WorldPop population data at the ADM2 (typically, district) level, formatted to be particularly browsable in Carto. Starting with Africa continent data. WorldPop population models covers most all of Latin America and the Caribbean, Africa and Asia.
+Makefile combining GADM3.6 with 2020 WorldPop population data at the ADM2 (typically, district) level, formatted to be particularly browsable in Carto. Starting with Africa continent data. 
+
+WorldPop population models covers most all of Latin America and the Caribbean, Africa and Asia.
 
 ### Data Sources
 
@@ -19,7 +21,7 @@ Makefile combining GADM3.6 with 2020 WorldPop population data at the ADM2 (typic
 * Make
 * curl
 
-### This image would not be possible without
+### This work would not be possible without
 * [Kartoza's Dockerized QGIS](https://github.com/kartoza/docker-qgis-desktop)
 * New York Times' team devotion to mapshaper
 * the fantastic Carto.com builder automatic aggregations
