@@ -11,8 +11,7 @@ WorldPop population models covers most all of Latin America and the Caribbean, A
 * https://www.naturalearthdata.com/ (for Africa Region names)
 
 \* Derived from this source using external analysis.
-
-![image](https://user-images.githubusercontent.com/283343/41881725-d6d3cfd4-78b2-11e8-9e48-bd51a9f943a4.png)
+![image](https://user-images.githubusercontent.com/283343/41885042-34f39822-78c4-11e8-9fcc-6194d032be41.png)
 
 ### Dependencies
 * New York Times' [mapshaper](https://github.com/mbloch/mapshaper) `npm install
