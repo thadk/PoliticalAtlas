@@ -136,6 +136,7 @@ data/docker.pid:
 	mkdir -p $(dir $@)
 	#echo DISPLAY IP address must be your local machine IP.
 	#on Mac you must run socat as described at http://kartoza.com/en/blog/how-to-run-a-linux-gui-application-on-osx-using-docker/
+	# then adjust DISPLAY
 	@echo "Docker was freshly started, you may need to reinitiate the process"
 	docker run --detach  -e DISPLAY=10.253.73.71:0 -i -t \
 	 -v $$(pwd)/rasterScripts/.config:/root/.config \
@@ -167,7 +168,7 @@ data/shp/continents-levels2-2_pop.shp: data/shp/continents-levels2-2.shp data/do
 	cp $(basename $<).shx $(basename $@).shx
 	cp $(basename $<).prj $(basename $@).prj
 	-docker exec -t $(DOCKERID) \
-	qgis  \
+	run-xvfb qgis  \
 	 --code /opt/data/rasterScripts/africaPopulationZonalStats.py \
 	 --nologo \
 		/opt/data/$@
