@@ -5,7 +5,7 @@
 # := assignment only gets run once at the beginning of everything
 # = assignment gets run each time (but can cause an infinite loop)
 
-DEFAULT_GOAL := data/shp/continents-levels2-2_pop_density.shp
+.DEFAULT_GOAL := data/shp/continents-levels2-2_pop_density.shp
 
 #################
 # DOWNLOAD DATA #
