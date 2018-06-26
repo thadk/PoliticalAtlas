@@ -26,3 +26,8 @@ WorldPop population models covers most all of Latin America and the Caribbean, A
 * New York Times' team devotion to mapshaper
 * the fantastic Carto.com builder automatic aggregations
 * [Farm Radio International](http://www.farmradio.org/) support to explore the toolchain.
+
+### Makefile resources:
+* Similar Makefile which this format was inspired by: https://github.com/scities-data/metro-atlas_2014/blob/master/Makefile
+* To a lesser extent, this guide https://github.com/datamade/data-making-guidelines and
+* also Mike Bostock's article: https://bost.ocks.org/mike/make/
