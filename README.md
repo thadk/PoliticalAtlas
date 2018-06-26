@@ -21,6 +21,12 @@ WorldPop population models covers most all of Latin America and the Caribbean, A
 * Make
 * curl
 
+### Instructions
+After installing dependencies, use:
+* `make`
+* upload `data/shp/continents-levels2-2_pop_density.shp` to the
+Carto as a new map.
+
 ### This work would not be possible without
 * [Kartoza's Dockerized QGIS](https://github.com/kartoza/docker-qgis-desktop)
 * New York Times' team devotion to mapshaper
