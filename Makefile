@@ -87,6 +87,8 @@ data/tif/AFR_PPP_A1565PL_farmer_aged_lt400ppp_2020_adj_v5.tif: data/gz/AFR_PPP_A
 	rmdir $(basename $@)
 	touch $@
 
+africa_2020_tifs = data/tif/AFR_PPP_2020_adj_v2.tif data/tif/AFR_PPP_A1565PL_farmer_aged_lt400ppp_2020_adj_v5.tif data/tif/AFR_PPP_A1565PL_farmer_aged_2020_adj_v5.tif
+
 #an experiment to start with adm4 and dissolve up
 # data/shp/gadm36.shp: data/gz/gadm36_shp.zip
 # 	rm -rf $(basename $@)
@@ -142,7 +144,7 @@ data/docker.aptgetupdate:
 	@echo "Trying to run apt-get for java: Docker was freshly started, you may need to reinitiate the process"
 	mkdir -p $(dir $@)
 	docker exec -i -t $(DOCKERID) apt-get update
-	docker exec -i -t $(DOCKERID) apt-get install xvfb
+	docker exec -i -t $(DOCKERID) apt-get install xvfb -y
 	docker exec -i -t $(DOCKERID) apt-get install python-yaml -y
 	touch $@
 
@@ -151,7 +153,7 @@ data/docker.aptgetupdate:
 # USE RASTER DATA AGAINST VECTOR #
 #######################
 
-data/shp/continents-levels2-2_pop.shp: data/shp/continents-levels2-2.shp data/docker.pid data/docker.aptgetupdate
+data/shp/continents-levels2-2_pop.shp: data/shp/continents-levels2-2.shp data/docker.pid data/docker.aptgetupdate ${africa_2020_tifs}
 #	on linux use xvfb-run to make it headless
 	cp $(basename $<).shp $(basename $@).shp
 	cp $(basename $<).dbf $(basename $@).dbf
