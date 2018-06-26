@@ -18,3 +18,9 @@ Makefile combining GADM3.6 with 2020 WorldPop population data at the ADM2 (typic
 * [Docker](https://www.docker.com/community-edition)
 * Make
 * curl
+
+### This image would not be possible without
+* [Kartoza's Dockerized QGIS](https://github.com/kartoza/docker-qgis-desktop)
+* New York Times' team devotion to mapshaper
+* the fantastic Carto.com builder automatic aggregations
+* [Farm Radio International](http://www.farmradio.org/) support to explore the toolchain.
