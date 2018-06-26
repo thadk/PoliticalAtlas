@@ -1,8 +1,8 @@
 # WorldPoliticalPopulation
 
-Makefile combining GADM3.6 with 2020 WorldPop population data at the ADM2 (typically, district) level, formatted to be particularly browsable in Carto. Starting with Africa continent data. 
+Makefile combining GADM3.6 with 2020 WorldPop population data at the ADM2 (typically, district) level, formatted to be particularly browsable in Carto. Starting with Africa continent data.
 
-WorldPop population models covers most all of Latin America and the Caribbean, Africa and Asia.
+WorldPop gridded population models covers most all of Latin America and the Caribbean, Africa and Asia. The models may not be exactly designed for this purpose but results tend to be only a small margin different from other more official census and UN sources (especially around the equator).
 
 ### Data Sources
 
