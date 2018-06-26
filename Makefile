@@ -111,25 +111,6 @@ data/shp/continents-levels2-2.shp: data/shp/gadm36_2.shp data/shp/ne_10m_admin_0
 	-o format=shapefile $(dir $@)/continents-levels2-.shp
 	-rm $(dir $@)continents-levels2-{0,1,3,4,5,6,7,8,9}.*
 
-#an experiment to start with adm4 and dissolve up: starting directly with adm2 works better.
-# data/shp/continents/all-4.shp: data/shp/gadm36.shp data/shp/ne_10m_admin_0_countries.shp
-# 	mkdir -p $(dir $@)
-# 	mapshaper-xl -i $< \
-# 	-join keys="GID_0,ISO_A3" $(word 2,$^) fields="NAME,ISO_A3,FORMAL_EN,NAME_SORT,SUBREGION,CONTINENT" \
-# 	-rename-fields "Country=NAME,FormalCountryName=FORMAL_EN,CountrySort=NAME_SORT,AfricaRegion=SUBREGION" \
-#     -split CONTINENT \
-# 	-o format=shapefile $(dir $@)/all-.shp
-# 	rm $(dir $@)/all-{0,1,2,3,5}.*
-
-#an experiment to start with adm4 and dissolve up: starting directly with adm2 works better.
-# data/shp/africa-2.shp: data/shp/continents/all-4.shp
-# 	mkdir -p $(dir $@)
-# 	mapshaper-xl -i $< \
-# 		-dissolve GID_2 \
-# 		-clean \
-# 	-o format=shapefile $(dir $@)/africa-.shp
-# 	rm $(dir $@)/africa-{0,1,3,4,5,6,7,8,9}.*
-
 
 #UGANDA and ETHIOPIA have some problem areas that crash QGIS when using them as INTERSECT layers.
 #We do not use intersect in this Makefile so far, but keeping this for later.
@@ -139,15 +120,6 @@ data/shp/africa-carefulregions.shp: data/shp/continents-levels2-2.shp
 	-filter "GID_0!=='UGA'" \
 	-filter "GID_0!=='ETH'" \
 	-o format=shapefile $@
-
-
-#eastafrica3 is west, 2 is east
-# data/shp/subregion-2.shp: data/shp/continents/levels2.shp
-# 	mkdir -p $(dir $@)
-# 	mapshaper-xl -i $< \
-# 	-split AfricaRegi \
-# 	-o format=shapefile $@
-# 	rm $(dir $@)/subregion-{0,1,3,4,5,6,7,8,9}.*
 
 
 #######################
