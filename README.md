@@ -23,7 +23,8 @@ WorldPop gridded population models covers most all of Latin America and the Cari
 ### Instructions
 After installing dependencies, use:
 * `make` (on my MacBook Pro 2016, this takes about 8min)
-* upload `data/shp/continents-levels2-2_pop_density.shp` to the
+* upload `data/gz/continents-levels2-2_pop_density.zip` (containing a
+  shapefile) to the
 Carto as a new map.
 
 ### This work would not be possible without

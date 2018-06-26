@@ -5,7 +5,7 @@
 # := assignment only gets run once at the beginning of everything
 # = assignment gets run each time (but can cause an infinite loop)
 
-.DEFAULT_GOAL := data/shp/continents-levels2-2_pop_density.shp
+.DEFAULT_GOAL := data/gz/continents-levels2-2_pop_density.zip
 
 #################
 # DOWNLOAD DATA #
@@ -35,6 +35,9 @@ data/gz/AFR_PPP_A1565PL_farmer_aged.zip:
 	curl 'https://s3.amazonaws.com/peacecorps-osm/AFR_PPP_A1565PL_farmer_aged.zip' -o $@.download
 	mv $@.download $@	
 
+#Lake layer:
+#http://naciscdn.org/naturalearth/10m/physical/ne_10m_lakes.zip
+
 #an experiment to start with adm4 and dissolve up
 # data/gz/gadm36_shp.zip:
 # 	mkdir -p $(dir $@)
@@ -52,6 +55,17 @@ data/shp/gadm36_2.shp: data/gz/gadm36_levels_shp.zip
 	unzip -d $(basename $@) $<
 	#We do not need all the other administrative levels except 2: a happy medium
 	rm $(basename $@)/gadm36_{0,1,3,4,5}.*
+	for file in $(basename $@)/*; do chmod 644 $$file; mv $$file $(basename $@).$${file##*.}; done
+	rmdir $(basename $@)
+	touch $@
+
+#download all the admin levels and then throw away everything except adm2 (districts)
+data/shp/gadm36_0.shp: data/gz/gadm36_levels_shp.zip
+	rm -rf $(basename $@)
+	mkdir -p $(basename $@)
+	unzip -d $(basename $@) $<
+	#We do not need all the other administrative levels except 2: a happy medium
+	rm $(basename $@)/gadm36_{1,2,3,4,5}.*
 	for file in $(basename $@)/*; do chmod 644 $$file; mv $$file $(basename $@).$${file##*.}; done
 	rmdir $(basename $@)
 	touch $@
@@ -125,6 +139,19 @@ data/shp/africa-carefulregions.shp: data/shp/continents-levels2-2.shp
 	-filter "GID_0!=='ETH'" \
 	-o format=shapefile $@
 
+#continents-levels0-3.shp is Africa, 
+# this is used for the layer with the boundaries between countries.
+data/shp/continents-levels0-3.shp: data/shp/gadm36_0.shp data/shp/ne_10m_admin_0_countries.shp
+	mkdir -p $(dir $@)
+	mapshaper-xl -i $< \
+	-join keys="GID_0,ISO_A3" $(word 2,$^) fields="NAME,ISO_A3,FORMAL_EN,NAME_SORT,SUBREGION,CONTINENT" \
+	-rename-fields "Country=NAME,FormalCountryName=FORMAL_EN,CountrySort=NAME_SORT,AfricaRegion=SUBREGION" \
+    -split CONTINENT \
+	-innerlines \
+	-simplify dp 10% \
+	-o format=shapefile $(dir $@)/continents-levels0-.shp
+	-rm $(dir $@)continents-levels0-{1,2,4,5,6,7,8,9}.*
+
 
 #######################
 # CONVERT RASTER DATA TO VECTOR  #
@@ -181,6 +208,12 @@ data/shp/continents-levels2-2_pop_density.shp: data/shp/continents-levels2-2_pop
 #######################
 # Upload #
 #######################
+data/shp/continents-levels0-3.zip: data/shp/continents-levels0-3.shp
+	zip $@ data/shp/continents-levels0-3.{shp,shx,prj,dbf}
+
+data/gz/continents-levels2-2_pop_density.zip: data/shp/continents-levels2-2_pop_density.shp
+	zip $@ data/shp/continents-levels2-2_pop_density.*
+
 carto-upload: CARTO_USER:=$(shell cat ../creds/CARTO_USER)
 carto-upload: CARTO_APIKEY:=$(shell cat ../creds/CARTO_APIKEY)
 carto-upload: 
