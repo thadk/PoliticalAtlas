@@ -168,7 +168,7 @@ data/shp/continents-levels2-2_pop.shp: data/shp/continents-levels2-2.shp data/do
 	cp $(basename $<).shx $(basename $@).shx
 	cp $(basename $<).prj $(basename $@).prj
 	-docker exec -t $(DOCKERID) \
-	run-xvfb qgis  \
+	xvfb-run qgis  \
 	 --code /opt/data/rasterScripts/africaPopulationZonalStats.py \
 	 --nologo \
 		/opt/data/$@
@@ -196,6 +196,8 @@ clean: DATESHORT:=$(shell date +%Y-%m-%d-%H-%M-%S)
 clean: JUNKBIN= ~/Downloads/VMs
 clean:
 	mkdir -p ${JUNKBIN}
+	docker stop $(DOCKERID) 
+	docker rm $(DOCKERID)
 	-rm data/docker.pid
 	-rm data/docker.aptgetupdate
 	-mv data/shp ${JUNKBIN}/shp-$(DATESHORT)
