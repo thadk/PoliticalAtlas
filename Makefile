@@ -130,7 +130,7 @@ data/shp/africa-carefulregions.shp: data/shp/continents-levels2-2.shp
 # CONVERT RASTER DATA TO VECTOR  #
 #######################
 
-DOCKERID := $(shell cat data/docker.pid) #"98aa123a0d43"
+DOCKERID = $(shell cat data/docker.pid) #"98aa123a0d43"
 
 data/docker.pid:
 	mkdir -p $(dir $@)
@@ -149,6 +149,7 @@ data/docker.aptgetupdate:
 	docker exec -i -t $(DOCKERID) apt-get install xvfb -y
 	docker exec -i -t $(DOCKERID) apt-get install python-yaml -y
 	#Turn off QGIS initial tooltip so QGIS headless doesn't hang endlessly:
+	docker exec -i -t $(DOCKERID) mkdir -p /root/.config/QGIS/
 	docker exec -i -t $(DOCKERID) printf "[Qgis]\nshowTips=false" > /root/.config/QGIS/QGIS2.conf
 	touch $@
 
