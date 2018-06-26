@@ -146,6 +146,8 @@ data/docker.aptgetupdate:
 	docker exec -i -t $(DOCKERID) apt-get update
 	docker exec -i -t $(DOCKERID) apt-get install xvfb -y
 	docker exec -i -t $(DOCKERID) apt-get install python-yaml -y
+	#Turn off QGIS initial tooltip so QGIS headless doesn't hang endlessly:
+	docker exec -i -t $(DOCKERID) printf "[Qgis]\nshowTips=false" > /root/.config/QGIS/QGIS2.conf
 	touch $@
 
 
