@@ -7,7 +7,7 @@ WorldPop gridded population models covers most all of Latin America and the Cari
 ### Data Sources
 
 * http://gadm.org/ (for ADM2 boundaries)
-* http://www.worldpop.org.uk/ (for Total, Adult\* and Rural\* population)
+* http://www.worldpop.org.uk/ (for Total, Adult\* and Rural\* population) -[more](https://www.nature.com/articles/sdata20171)
 * https://www.naturalearthdata.com/ (for Africa Region names)
 
 \* Derived from this source using external analysis.
