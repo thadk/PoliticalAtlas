@@ -153,6 +153,7 @@ data/docker.aptgetupdate:
 # USE RASTER DATA AGAINST VECTOR #
 #######################
 
+#On my MBP2016, each raster takes about 100sec to run on the polygons.
 data/shp/continents-levels2-2_pop.shp: data/shp/continents-levels2-2.shp data/docker.pid data/docker.aptgetupdate ${africa_2020_tifs}
 #	on linux use xvfb-run to make it headless
 	cp $(basename $<).shp $(basename $@).shp
@@ -160,7 +161,7 @@ data/shp/continents-levels2-2_pop.shp: data/shp/continents-levels2-2.shp data/do
 	cp $(basename $<).shx $(basename $@).shx
 	cp $(basename $<).prj $(basename $@).prj
 	-docker exec -t $(DOCKERID) \
-	 xvfb-run qgis  \
+	qgis  \
 	 --code /opt/data/rasterScripts/africaPopulationZonalStats.py \
 	 --nologo \
 		/opt/data/$@
@@ -188,6 +189,8 @@ clean: DATESHORT:=$(shell date +%Y-%m-%d-%H-%M-%S)
 clean: JUNKBIN= ~/Downloads/VMs
 clean:
 	mkdir -p ${JUNKBIN}
+	-rm data/docker.pid
+	-rm data/docker.aptgetupdate
 	-mv data/shp ${JUNKBIN}/shp-$(DATESHORT)
 	-mv data/geojson ${JUNKBIN}/geojson-$(DATESHORT)
 	-mv data/csv ${JUNKBIN}/csv-$(DATESHORT)
