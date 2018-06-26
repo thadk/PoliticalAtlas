@@ -23,7 +23,7 @@ WorldPop population models covers most all of Latin America and the Caribbean, A
 
 ### Instructions
 After installing dependencies, use:
-* `make`
+* `make` (on my MacBook Pro 2016, this takes about 8min)
 * upload `data/shp/continents-levels2-2_pop_density.shp` to the
 Carto as a new map.
 
