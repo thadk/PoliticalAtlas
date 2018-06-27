@@ -11,7 +11,7 @@ WorldPop gridded population models covers most all of Latin America and the Cari
 * https://www.naturalearthdata.com/ (for Africa Region names)
 
 \* Derived from this source using external analysis.
-![image](https://user-images.githubusercontent.com/283343/41885042-34f39822-78c4-11e8-9fcc-6194d032be41.png)
+![popmap4](https://user-images.githubusercontent.com/283343/41951032-f0072980-7996-11e8-8e56-620c4881a40c.gif)
 
 ### Dependencies
 * New York Times' [mapshaper](https://github.com/mbloch/mapshaper) `npm install
