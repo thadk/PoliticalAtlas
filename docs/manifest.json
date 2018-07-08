@@ -1,0 +1,16 @@
+{
+  "main.css": "styles.css",
+  "main.js": "render-page.js",
+  "main.js.map": "render-page.js.map",
+  "static/devicon.eot": "static/devicon.681fa39a.eot",
+  "static/devicon.eot?-hdf3wh": "static/devicon.681fa39a.eot",
+  "static/devicon.svg?-hdf3wh": "static/devicon.74e6e6c3.svg",
+  "static/devicon.ttf?-hdf3wh": "static/devicon.29f80b00.ttf",
+  "static/devicon.woff?-hdf3wh": "static/devicon.0f964a72.woff",
+  "static/fontawesome-webfont.eot": "static/fontawesome-webfont.674f50d2.eot",
+  "static/fontawesome-webfont.eot?v=4.7.0": "static/fontawesome-webfont.674f50d2.eot",
+  "static/fontawesome-webfont.svg?v=4.7.0": "static/fontawesome-webfont.912ec66d.svg",
+  "static/fontawesome-webfont.ttf?v=4.7.0": "static/fontawesome-webfont.b06871f2.ttf",
+  "static/fontawesome-webfont.woff2?v=4.7.0": "static/fontawesome-webfont.af7ae505.woff2",
+  "static/fontawesome-webfont.woff?v=4.7.0": "static/fontawesome-webfont.fee66e71.woff"
+}
