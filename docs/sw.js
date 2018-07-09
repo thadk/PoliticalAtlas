@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["/PoliticalAtlas/app-35b1bbbf6b5931ef6104.js","a804bd2d9a5fccc863a6df2cbbdf67a9"],["/PoliticalAtlas/commons-88edc3cbcd2382c1076a.js","aed8e5718e30a412ee92d71da786fa98"],["/PoliticalAtlas/index.html","96759beb319ca525705310f617e9e75d"],["/PoliticalAtlas/manifest.json","e92b2b9d2dda3ae16e7df792c6cf21f4"],["/PoliticalAtlas/manifest.webmanifest","f2cc56d107c98c6fb9f38fab2195bcca"],["/PoliticalAtlas/offline-plugin-app-shell-fallback/index.html","c29b956bbe92d0f6e3138f6ac1209590"]];
+var precacheConfig = [["/PoliticalAtlas/app-35b1bbbf6b5931ef6104.js","a804bd2d9a5fccc863a6df2cbbdf67a9"],["/PoliticalAtlas/commons-88edc3cbcd2382c1076a.js","aed8e5718e30a412ee92d71da786fa98"],["/PoliticalAtlas/index.html","9eb84b2ce6ef78f75fdceea8712e1c21"],["/PoliticalAtlas/manifest.json","e92b2b9d2dda3ae16e7df792c6cf21f4"],["/PoliticalAtlas/manifest.webmanifest","f2cc56d107c98c6fb9f38fab2195bcca"],["/PoliticalAtlas/offline-plugin-app-shell-fallback/index.html","c7b1101d96ca21afa9500852d2a7e72a"]];
 var cacheName = 'sw-precache-v3-gatsby-plugin-offline-' + (self.registration ? self.registration.scope : '');
 
 
