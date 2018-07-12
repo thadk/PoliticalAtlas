@@ -1,8 +1,30 @@
-# WorldPoliticalPopulation
+# PoliticalAtlas
+**Have you ever wanted to...**
 
-Makefile combining GADM3.6 with 2020 WorldPop population data at the ADM2 (typically, district) level, formatted to be particularly browsable in Carto. Starting with Africa continent data.
+* know how densely settled a particular area of the world is?
+* know why a particular region far from the capital is prominent?
+* understand why more projects are happening in one area versus another?
+
+<div class="text-center">
+<a href="/PoliticalAtlas/africa"><button type="button" class="btn btn-primary">View Africa Atlas</button></a> &nbsp;
+<a href="/PoliticalAtlas/asia"><button type="button" class="btn btn-primary">View Asia Atlas</button></a> <a href="https://github.com/thadk/WorldPoliticalPopulation"><button type="button" class="btn btn-primary">Star this project on Github</button></a> 
+</div>
+
+*Then, the maps buttons above or the underlying data/code below might help!*
+
+Starting with Africa and Asia continent data, Latin America to come.
+
+World Atlas combining GADM3.6 with 2020 WorldPop population data at the ADM2 (typically, district) level, formatted to be particularly browsable in Carto. 
+
+**This atlas is not affiliated with any organization and does not attempt to represent any boundaries in an authoritative way.** Each country has its own representation of international boundaries and labels but only one version is offered here.
 
 WorldPop gridded population models covers most all of Latin America and the Caribbean, Africa and Asia. The models may not be exactly designed for this purpose but results tend to be only a small margin different from other more official census and UN sources (especially around the equator).
+
+### Use the Data Produced in this Project!
+* [CSV data for Administrative Level 2 population for Africa](https://github.com/thadk/PoliticalAtlas/raw/master/data/csv/continents-levels2-AFR_pop_density.csv) 
+* [CSV data for Administrative Level 2 population for Asia](https://github.com/thadk/PoliticalAtlas/raw/master/data/csv/continents-levels2-Asia_pop_density.csv)
+* [Uploadable Carto file for Africa](https://s3.amazonaws.com/peacecorps-osm/AfricaAtlas.carto) (Create Carto account, drag/drop into profile and start customizing your own map in 3 clicks)
+* [Uploadable Carto file for Asia](https://s3.amazonaws.com/peacecorps-osm/AsiaAtlas.carto) 
 
 ### Data Sources
 
