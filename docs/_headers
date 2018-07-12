@@ -6,39 +6,39 @@
   X-Content-Type-Options: nosniff
 /static/*
   Cache-Control: max-age=31536000
-/offline-plugin-app-shell-fallback/
-  Link: </commons-88edc3cbcd2382c1076a.js>; rel=preload; as=script
-  Link: </app-35b1bbbf6b5931ef6104.js>; rel=preload; as=script
-  Link: </path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js>; rel=preload; as=script
-  Link: </component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js>; rel=preload; as=script
-  Link: </component---src-layouts-index-js-9c479dd91ce43d0b45cf.js>; rel=preload; as=script
-/hello-world/
-  Link: </commons-88edc3cbcd2382c1076a.js>; rel=preload; as=script
-  Link: </app-35b1bbbf6b5931ef6104.js>; rel=preload; as=script
-  Link: </path---hello-world-a7ddb614f7410c7a579f.js>; rel=preload; as=script
-  Link: </component---src-templates-blog-post-js-46ef56e717104ab98318.js>; rel=preload; as=script
-  Link: </component---src-layouts-index-js-9c479dd91ce43d0b45cf.js>; rel=preload; as=script
-/africa/
-  Link: </commons-88edc3cbcd2382c1076a.js>; rel=preload; as=script
-  Link: </app-35b1bbbf6b5931ef6104.js>; rel=preload; as=script
-  Link: </path---africa-a0e39f21c11f6a62c5ab.js>; rel=preload; as=script
-  Link: </component---src-pages-africa-index-jsx-e42324000272776e020f.js>; rel=preload; as=script
-  Link: </component---src-layouts-index-js-9c479dd91ce43d0b45cf.js>; rel=preload; as=script
-/asia/
-  Link: </commons-88edc3cbcd2382c1076a.js>; rel=preload; as=script
-  Link: </app-35b1bbbf6b5931ef6104.js>; rel=preload; as=script
-  Link: </path---asia-a0e39f21c11f6a62c5ab.js>; rel=preload; as=script
-  Link: </component---src-pages-asia-index-jsx-103754fe8b81c09e2290.js>; rel=preload; as=script
-  Link: </component---src-layouts-index-js-9c479dd91ce43d0b45cf.js>; rel=preload; as=script
-/
-  Link: </commons-88edc3cbcd2382c1076a.js>; rel=preload; as=script
-  Link: </app-35b1bbbf6b5931ef6104.js>; rel=preload; as=script
-  Link: </path---index-74346750f079b56afc9e.js>; rel=preload; as=script
-  Link: </component---src-pages-index-js-4f4c73ba759645fb8114.js>; rel=preload; as=script
-  Link: </component---src-layouts-index-js-9c479dd91ce43d0b45cf.js>; rel=preload; as=script
-/profile/
-  Link: </commons-88edc3cbcd2382c1076a.js>; rel=preload; as=script
-  Link: </app-35b1bbbf6b5931ef6104.js>; rel=preload; as=script
-  Link: </path---profile-a0e39f21c11f6a62c5ab.js>; rel=preload; as=script
-  Link: </component---src-pages-profile-index-jsx-62ee4994c5665312aa68.js>; rel=preload; as=script
-  Link: </component---src-layouts-index-js-9c479dd91ce43d0b45cf.js>; rel=preload; as=script
+/PoliticalAtlas/offline-plugin-app-shell-fallback/
+  Link: </PoliticalAtlas/commons-88edc3cbcd2382c1076a.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/app-35b1bbbf6b5931ef6104.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/component---src-layouts-index-js-9c479dd91ce43d0b45cf.js>; rel=preload; as=script
+/PoliticalAtlas/hello-world/
+  Link: </PoliticalAtlas/commons-88edc3cbcd2382c1076a.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/app-35b1bbbf6b5931ef6104.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/path---hello-world-a7ddb614f7410c7a579f.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/component---src-templates-blog-post-js-46ef56e717104ab98318.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/component---src-layouts-index-js-9c479dd91ce43d0b45cf.js>; rel=preload; as=script
+/PoliticalAtlas/africa/
+  Link: </PoliticalAtlas/commons-88edc3cbcd2382c1076a.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/app-35b1bbbf6b5931ef6104.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/path---africa-a0e39f21c11f6a62c5ab.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/component---src-pages-africa-index-jsx-e42324000272776e020f.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/component---src-layouts-index-js-9c479dd91ce43d0b45cf.js>; rel=preload; as=script
+/PoliticalAtlas/asia/
+  Link: </PoliticalAtlas/commons-88edc3cbcd2382c1076a.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/app-35b1bbbf6b5931ef6104.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/path---asia-a0e39f21c11f6a62c5ab.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/component---src-pages-asia-index-jsx-103754fe8b81c09e2290.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/component---src-layouts-index-js-9c479dd91ce43d0b45cf.js>; rel=preload; as=script
+/PoliticalAtlas/
+  Link: </PoliticalAtlas/commons-88edc3cbcd2382c1076a.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/app-35b1bbbf6b5931ef6104.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/path---index-74346750f079b56afc9e.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/component---src-pages-index-js-4f4c73ba759645fb8114.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/component---src-layouts-index-js-9c479dd91ce43d0b45cf.js>; rel=preload; as=script
+/PoliticalAtlas/profile/
+  Link: </PoliticalAtlas/commons-88edc3cbcd2382c1076a.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/app-35b1bbbf6b5931ef6104.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/path---profile-a0e39f21c11f6a62c5ab.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/component---src-pages-profile-index-jsx-62ee4994c5665312aa68.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/component---src-layouts-index-js-9c479dd91ce43d0b45cf.js>; rel=preload; as=script
