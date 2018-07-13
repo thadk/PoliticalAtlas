@@ -7,7 +7,7 @@
 # := assignment only gets run once at the beginning of everything
 # = assignment gets run each time (but can cause an infinite loop)
 
-.DEFAULT_GOAL := ready-main-maps
+.DEFAULT_GOAL := all
 
 all: data/gz/continents-levels2-Asia_pop_density.zip data/gz/continents-levels2-AFR_pop_density.zip csvs
 
