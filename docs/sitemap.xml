@@ -4,5 +4,6 @@
 <url> <loc>https://thadk.net/PoliticalAtlas//PoliticalAtlas/africa/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://thadk.net/PoliticalAtlas//PoliticalAtlas/asia/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://thadk.net/PoliticalAtlas//PoliticalAtlas/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://thadk.net/PoliticalAtlas//PoliticalAtlas/nasa-night/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://thadk.net/PoliticalAtlas//PoliticalAtlas/profile/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
