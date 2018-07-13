@@ -11,7 +11,7 @@
 
 all: data/gz/continents-levels2-Asia_pop_density.zip data/gz/continents-levels2-AFR_pop_density.zip csvs
 
-#These sections is broken out for each continent in these 3 files:
+#These sections are broken out for each continent in 3 files:
 include AFR.mk Asia.mk LAC.mk
 
 #################
