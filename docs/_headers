@@ -15,7 +15,7 @@
 /PoliticalAtlas/hello-world/
   Link: </PoliticalAtlas/commons-88edc3cbcd2382c1076a.js>; rel=preload; as=script
   Link: </PoliticalAtlas/app-2bcde8cfb97f6b0ed8d9.js>; rel=preload; as=script
-  Link: </PoliticalAtlas/path---hello-world-b92e947499d1ef8392d1.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/path---hello-world-7be4803c06011da08945.js>; rel=preload; as=script
   Link: </PoliticalAtlas/component---src-templates-blog-post-js-46ef56e717104ab98318.js>; rel=preload; as=script
   Link: </PoliticalAtlas/component---src-layouts-index-js-a330888a39ce0b633231.js>; rel=preload; as=script
 /PoliticalAtlas/africa/
@@ -33,7 +33,7 @@
 /PoliticalAtlas/
   Link: </PoliticalAtlas/commons-88edc3cbcd2382c1076a.js>; rel=preload; as=script
   Link: </PoliticalAtlas/app-2bcde8cfb97f6b0ed8d9.js>; rel=preload; as=script
-  Link: </PoliticalAtlas/path---index-6cdc82161ad64e88f910.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/path---index-14260bf107be4986e853.js>; rel=preload; as=script
   Link: </PoliticalAtlas/component---src-pages-index-js-4f4c73ba759645fb8114.js>; rel=preload; as=script
   Link: </PoliticalAtlas/component---src-layouts-index-js-a330888a39ce0b633231.js>; rel=preload; as=script
 /PoliticalAtlas/nasa-night/
@@ -46,5 +46,5 @@
   Link: </PoliticalAtlas/commons-88edc3cbcd2382c1076a.js>; rel=preload; as=script
   Link: </PoliticalAtlas/app-2bcde8cfb97f6b0ed8d9.js>; rel=preload; as=script
   Link: </PoliticalAtlas/path---profile-a0e39f21c11f6a62c5ab.js>; rel=preload; as=script
-  Link: </PoliticalAtlas/component---src-pages-profile-index-jsx-29ff2e2f7b1f415a0ced.js>; rel=preload; as=script
+  Link: </PoliticalAtlas/component---src-pages-profile-index-jsx-f5883ab39babbf7bd248.js>; rel=preload; as=script
   Link: </PoliticalAtlas/component---src-layouts-index-js-a330888a39ce0b633231.js>; rel=preload; as=script

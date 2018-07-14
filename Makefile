@@ -36,7 +36,7 @@ data/gz/ne_10m_admin_0_countries.zip:
 # UNCOMPRESS DATA #
 #################
 
-#download all the admin levels and then throw away everything except adm2 (districts)
+# download all the admin levels and then throw away everything except adm2 (districts)
 data/shp/gadm36_2.shp: data/gz/gadm36_levels_shp.zip
 	rm -rf $(basename $@)
 	mkdir -p $(basename $@)
@@ -47,7 +47,7 @@ data/shp/gadm36_2.shp: data/gz/gadm36_levels_shp.zip
 	rmdir $(basename $@)
 	touch $@
 
-#download all the admin levels and then throw away everything except adm2 (districts)
+# download all the admin levels and then throw away everything except adm0 (countries)
 data/shp/gadm36_0.shp: data/gz/gadm36_levels_shp.zip
 	rm -rf $(basename $@)
 	mkdir -p $(basename $@)
@@ -58,7 +58,7 @@ data/shp/gadm36_0.shp: data/gz/gadm36_levels_shp.zip
 	rmdir $(basename $@)
 	touch $@
 
-#download all the admin levels and then throw away everything except adm2 (districts)
+# download all the admin levels and then throw away everything except adm1 (provinces)
 data/shp/gadm36_1.shp: data/gz/gadm36_levels_shp.zip
 	rm -rf $(basename $@)
 	mkdir -p $(basename $@)
@@ -69,6 +69,7 @@ data/shp/gadm36_1.shp: data/gz/gadm36_levels_shp.zip
 	rmdir $(basename $@)
 	touch $@
 
+# get extra metadata on countries from Natural Earth to join together with the rest
 data/shp/ne_10m_admin_0_countries.shp: data/gz/ne_10m_admin_0_countries.zip
 	rm -rf $(basename $@)
 	mkdir -p $(basename $@)
@@ -90,6 +91,7 @@ data/shp/ne_10m_admin_0_countries.shp: data/gz/ne_10m_admin_0_countries.zip
 
 DOCKERID = $(shell cat data/docker.pid) #"98aa123a0d43"
 
+# keep track of the docker container ID for Make in this file.
 data/docker.pid:
 	mkdir -p $(dir $@)
 	#echo DISPLAY IP address must be your local machine IP.
@@ -101,6 +103,7 @@ data/docker.pid:
 	 -v /Users/thadk:/home/thadk  \
 	 -v $$(pwd):/opt/data thadk/qgis-desktop:2.8.9a /bin/bash > $@
 
+# keep track of whether we've installed extra dependencies in the docker container
 data/docker.aptgetupdate:
 	@echo "Trying to run apt-get for java: Docker was freshly started, you may need to reinitiate the process"
 	mkdir -p $(dir $@)
@@ -109,8 +112,8 @@ data/docker.aptgetupdate:
 	docker exec -i -t $(DOCKERID) apt-get install python-yaml -y
 	#Turn off QGIS initial tooltip so QGIS headless doesn't hang endlessly
 	# (remember to update this preference if you change versions of QGIS):
-	#docker exec -i -t $(DOCKERID) mkdir -p /root/.config/QGIS/
-	#docker exec -i -t $(DOCKERID) sh -c 'printf "[Qgis]\nshowTips208=false">/root/.config/QGIS/QGIS2.conf'
+	docker exec -i -t $(DOCKERID) mkdir -p /root/.config/QGIS/
+	docker exec -i -t $(DOCKERID) sh -c 'printf "[Qgis]\nshowTips208=false">/root/.config/QGIS/QGIS2.conf'
 	touch $@
 
 
