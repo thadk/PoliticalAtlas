@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="preload" href="/PoliticalAtlas/component---src-layouts-index-js-a330888a39ce0b633231.js" as="script"/><link rel="preload" href="/PoliticalAtlas/component---src-templates-blog-post-js-46ef56e717104ab98318.js" as="script"/><link rel="preload" href="/PoliticalAtlas/path---hello-world-b4098782e97473aaa84d.js" as="script"/><link rel="preload" href="/PoliticalAtlas/app-2bcde8cfb97f6b0ed8d9.js" as="script"/><link rel="preload" href="/PoliticalAtlas/commons-88edc3cbcd2382c1076a.js" as="script"/><link rel="manifest" href="/PoliticalAtlas/manifest.webmanifest"/><meta name="theme-color" content="#262626"/><title data-react-helmet="true">Hello World: PoliticalAtlas | Political Population Atlas</title><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:site" content="@thadk"/><meta data-react-helmet="true" property="og:title" content="Hello World: PoliticalAtlas"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:description" content="Have you ever wanted to…
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="preload" href="/PoliticalAtlas/component---src-layouts-index-js-a330888a39ce0b633231.js" as="script"/><link rel="preload" href="/PoliticalAtlas/component---src-templates-blog-post-js-46ef56e717104ab98318.js" as="script"/><link rel="preload" href="/PoliticalAtlas/path---hello-world-11b9380562d03d519acb.js" as="script"/><link rel="preload" href="/PoliticalAtlas/app-2bcde8cfb97f6b0ed8d9.js" as="script"/><link rel="preload" href="/PoliticalAtlas/commons-88edc3cbcd2382c1076a.js" as="script"/><link rel="manifest" href="/PoliticalAtlas/manifest.webmanifest"/><meta name="theme-color" content="#262626"/><title data-react-helmet="true">Hello World: PoliticalAtlas | Political Population Atlas</title><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:site" content="@thadk"/><meta data-react-helmet="true" property="og:title" content="Hello World: PoliticalAtlas"/><meta data-react-helmet="true" property="og:type" content="article"/><meta data-react-helmet="true" property="og:description" content="Have you ever wanted to…
 
 know how densely settled a particular area of the world is?
 know why a particular region far from the capital is prominent?
@@ -32,8 +32,8 @@ understand why more projects are happening in one "/><meta data-react-helmet="tr
 <p><em>Then, the maps buttons above or the underlying data/code below might help!</em></p>
 <h3>Data Produced in this project</h3>
 <ul>
-<li><a href="https://github.com/thadk/PoliticalAtlas/raw/master/data/csv/continents-levels2-AFR_pop_density.csv"><button type="button" class="btn btn-secondary btn-sm">CSV data - Africa - ADM2</button></a>  for Administrative Level 2 population of Africa</li>
-<li><a href="https://github.com/thadk/PoliticalAtlas/raw/master/data/csv/continents-levels2-Asia_pop_density.csv"><button type="button" class="btn btn-secondary btn-sm">CSV data - Asia - ADM2</button></a> for Administrative Level 2 population of Asia</li>
+<li><a href="https://github.com/thadk/PoliticalAtlas/raw/master/data/csv/continents-levels2-AFR_pop_density.csv"><button type="button" class="btn btn-secondary btn-sm">CSV data - Africa - ADM2</button></a>  for Administrative Level 2 population of Africa, 57 territories</li>
+<li><a href="https://github.com/thadk/PoliticalAtlas/raw/master/data/csv/continents-levels2-Asia_pop_density.csv"><button type="button" class="btn btn-secondary btn-sm">CSV data - Asia - ADM2</button></a> for Administrative Level 2 population of Asia, 49 territories</li>
 <li><a href="https://s3.amazonaws.com/peacecorps-osm/AfricaAtlas.carto">Uploadable Carto file for Africa</a> - (Create Carto account)[https://carto.com/community/ambassadors/]–unfortunately this is harder than it used to be. Then, drag/drop into profile without unzipping and <a href="https://carto.com/learn/guides/intro/downloading-carto-maps/#import-a-carto-file">start customizing your own map in 3 clicks</a> (~51mb zipped)</li>
 <li><a href="https://s3.amazonaws.com/peacecorps-osm/AsiaAtlas.carto">Uploadable Carto file for Asia</a> (~91mb zipped)</li>
 </ul>
@@ -56,6 +56,7 @@ understand why more projects are happening in one "/><meta data-react-helmet="tr
 <ul>
 <li>Feel free to ask for help getting it running in the issues.</li>
 </ul>
+<p>Expand the rest below to hear about how the code works and how you can use it too.</p>
 <!--more-->
 <h3>Dependencies</h3>
 <ul>
@@ -66,12 +67,19 @@ mapshaper -g</code></li>
 <li>curl</li>
 </ul>
 <h3>Instructions</h3>
+<p>There are 3 continents codes: ‘AFR’ for Africa, ‘Asia’ for Asia, and ‘LAC’ for Latin America &#x26; Caribbean.</p>
 <p>After installing dependencies, use:</p>
 <ul>
 <li><code class="language-text">make</code> (on my MacBook Pro 2016, this takes about 8min)</li>
-<li>upload <code class="language-text">data/gz/continents-levels2-2_pop_density.zip</code> (containing a
-shapefile) to the
-Carto as a new map.</li>
+<li>for Africa, upload e.g. <code class="language-text">data/gz/continents-levels2-AFR_pop_density.zip</code> (containing a
+shapefile) to Carto as a new dataset. Then create your map around it, or use the shapefile on your own.</li>
+</ul>
+<p>This open source, docker-based process in this repository works with any clean polygons on any reletively modern computer with enough memory. It does not have to be administrative boundaries. Inspiring examples from WorldPop are: </p>
+<ul>
+<li>data about <a href="https://data.humdata.org/search?q=storm+track&#x26;ext_search_source=main-nav">storm tracks</a>, <a href="https://data.humdata.org/search?q=flood+extent&#x26;ext_page_size=25&#x26;sort=score+desc%2C+metadata_modified+desc">flood extents</a>, (drought maps)[https://data.humdata.org/search?ext<em>geodata=1&#x26;q=drought&#x26;ext</em>page<em>size=25&#x26;sort=score+desc%2C+metadata</em>modified+desc], (shake maps)[https://data.humdata.org/search?q=shake+maps&#x26;ext<em>page</em>size=25&#x26;sort=score+desc%2C+metadata_modified+desc], and (conflict zones)[https://data.humdata.org/search?ext<em>geodata=1&#x26;q=conflict&#x26;ext</em>page<em>size=25&#x26;sort=score+desc%2C+metadata</em>modified+desc] </li>
+<li>to provide estimates of how many people are affected and how severely.</li>
+<li>I have used this with NGO/Non-profit projects boundaries and radio station service perimeters.</li>
+<li>Feel free to ask for help getting it running in the issues.</li>
 </ul>
 <h3>This work would not be possible without</h3>
 <ul>
@@ -85,7 +93,7 @@ Carto as a new map.</li>
 <li>Similar Makefile which this format was inspired by: <a href="https://github.com/scities-data/metro-atlas_2014/blob/master/Makefile">https://github.com/scities-data/metro-atlas_2014/blob/master/Makefile</a></li>
 <li>To a lesser extent, this guide <a href="https://github.com/datamade/data-making-guidelines">https://github.com/datamade/data-making-guidelines</a> and</li>
 <li>also Mike Bostock’s article: <a href="https://bost.ocks.org/mike/make/">https://bost.ocks.org/mike/make/</a></li>
-</ul></div><div class="footer"><hr class="border-primary"/><p>Political Population Atlas<a href="/PoliticalAtlas/profile/"><br/><strong>thadk</strong> on Profile</a></p></div></div></div></div></div></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-2bcde8cfb97f6b0ed8d9.js","99219681209289":"component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js","107818501498521":"component---src-templates-blog-post-js-46ef56e717104ab98318.js","141026470247233":"component---src-pages-africa-index-jsx-e42324000272776e020f.js","269956845776915":"component---src-pages-asia-index-jsx-103754fe8b81c09e2290.js","35783957827783":"component---src-pages-index-js-4f4c73ba759645fb8114.js","235755204469712":"component---src-pages-nasa-night-index-jsx-4595f8d8ffcbd63be001.js","261381953904780":"component---src-pages-profile-index-jsx-29ff2e2f7b1f415a0ced.js","60335399758886":"path----557518bd178906f8d58a.js","210333531512890":"path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js","144342403179678":"path---hello-world-b4098782e97473aaa84d.js","28741169135824":"path---africa-a0e39f21c11f6a62c5ab.js","109378372664182":"path---asia-a0e39f21c11f6a62c5ab.js","142629428675168":"path---index-513fdd171a0d27703936.js","249377892616577":"path---nasa-night-a0e39f21c11f6a62c5ab.js","62474309173725":"path---profile-a0e39f21c11f6a62c5ab.js","114276838955818":"component---src-layouts-index-js-a330888a39ce0b633231.js"}/*]]>*/</script><script>
+</ul></div><div class="footer"><hr class="border-primary"/><p>Political Population Atlas<a href="/PoliticalAtlas/profile/"><br/><strong>thadk</strong> on Profile</a></p></div></div></div></div></div></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-2bcde8cfb97f6b0ed8d9.js","99219681209289":"component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js","107818501498521":"component---src-templates-blog-post-js-46ef56e717104ab98318.js","141026470247233":"component---src-pages-africa-index-jsx-e42324000272776e020f.js","269956845776915":"component---src-pages-asia-index-jsx-103754fe8b81c09e2290.js","35783957827783":"component---src-pages-index-js-4f4c73ba759645fb8114.js","235755204469712":"component---src-pages-nasa-night-index-jsx-4595f8d8ffcbd63be001.js","261381953904780":"component---src-pages-profile-index-jsx-29ff2e2f7b1f415a0ced.js","60335399758886":"path----557518bd178906f8d58a.js","210333531512890":"path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js","144342403179678":"path---hello-world-11b9380562d03d519acb.js","28741169135824":"path---africa-a0e39f21c11f6a62c5ab.js","109378372664182":"path---asia-a0e39f21c11f6a62c5ab.js","142629428675168":"path---index-fe23e266a4debf5e3671.js","249377892616577":"path---nasa-night-a0e39f21c11f6a62c5ab.js","62474309173725":"path---profile-a0e39f21c11f6a62c5ab.js","114276838955818":"component---src-layouts-index-js-a330888a39ce0b633231.js"}/*]]>*/</script><script>
             
   
   if(true) {
@@ -114,4 +122,4 @@ Carto as a new map.</li>
 
   return t;
 }(document, "script", "twitter-wjs"));
-      </script><script>/*<![CDATA[*/["/PoliticalAtlas/commons-88edc3cbcd2382c1076a.js","/PoliticalAtlas/app-2bcde8cfb97f6b0ed8d9.js","/PoliticalAtlas/path---hello-world-b4098782e97473aaa84d.js","/PoliticalAtlas/component---src-templates-blog-post-js-46ef56e717104ab98318.js","/PoliticalAtlas/component---src-layouts-index-js-a330888a39ce0b633231.js"].forEach(function(s){document.write('<script src="'+s+'" defer></'+'script>')})/*]]>*/</script><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script></body></html>
+      </script><script>/*<![CDATA[*/["/PoliticalAtlas/commons-88edc3cbcd2382c1076a.js","/PoliticalAtlas/app-2bcde8cfb97f6b0ed8d9.js","/PoliticalAtlas/path---hello-world-11b9380562d03d519acb.js","/PoliticalAtlas/component---src-templates-blog-post-js-46ef56e717104ab98318.js","/PoliticalAtlas/component---src-layouts-index-js-a330888a39ce0b633231.js"].forEach(function(s){document.write('<script src="'+s+'" defer></'+'script>')})/*]]>*/</script><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script></body></html>
